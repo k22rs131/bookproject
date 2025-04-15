@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
 
 ROOT_URLCONF = 'bookproject.urls'
