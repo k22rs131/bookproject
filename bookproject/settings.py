@@ -133,7 +133,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if not DEBUG:　# ローカルでの動作確認用に追加
+if not DEBUG: # ローカルでの動作確認用に追加
     STATIC_ROOT = str(BASE_DIR / 'staticfiles')
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage" 
 
