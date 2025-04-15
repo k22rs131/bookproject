@@ -13,4 +13,5 @@ pytz==2025.1
 sqlparse==0.5.3
 tomli==2.2.1
 typing-extensions==4.12.2
+django-environ
 python-decouple
