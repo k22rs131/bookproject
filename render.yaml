@@ -12,7 +12,7 @@ services:
     region: singapore
     pythonVersion: 3.11
     buildCommand: './build.sh'
-    startCommand: 'gunicorn mysite.wsgi:application'
+    startCommand: 'gunicorn bookproject.wsgi:application'
     plan: free
     branch: master
     healthCheckPath: /
