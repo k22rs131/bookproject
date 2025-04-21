@@ -32,7 +32,7 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = 'django-insecure-feb#f5t-at9v1r)1i3al9h5(6*9rz-=lsihzo#i=^+ekfir(ey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.onrender.com']
 #ALLOWED_HOSTS = ['*']
