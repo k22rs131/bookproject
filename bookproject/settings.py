@@ -32,7 +32,7 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = 'django-insecure-feb#f5t-at9v1r)1i3al9h5(6*9rz-=lsihzo#i=^+ekfir(ey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True#False
 
 ALLOWED_HOSTS = ['.onrender.com']
 #ALLOWED_HOSTS = ['*']
@@ -153,6 +153,19 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
+LOGGING = {#ログを出す
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
 
 
 # Default primary key field type
