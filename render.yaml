@@ -5,6 +5,9 @@ databases:
     databaseName: django_render_db
     user: django_user
 
+buildCommand: |
+  python manage.py collectstatic --noinput
+
 services:
   - type: web
     name: django_render
