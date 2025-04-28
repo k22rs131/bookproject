@@ -5,17 +5,13 @@ databases:
     databaseName: django_render_db
     user: django_user
 
-buildCommand: |
-  python manage.py collectstatic --noinput
-
 services:
   - type: web
     name: django_render
     env: python
     region: singapore
-    pythonVersion: 3.11
     buildCommand: './build.sh'
-    startCommand: gunicorn bookproject.wsgi:application -c gunicorn.conf.py
+    startCommand: 'gunicorn bookproject.wsgi:application'
     plan: free
     branch: master
     healthCheckPath: /
